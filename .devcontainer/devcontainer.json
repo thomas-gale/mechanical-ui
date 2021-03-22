@@ -1,0 +1,27 @@
+{
+	"name": "mechanical-ui",
+	"dockerFile": "Dockerfile",
+
+	// Set *default* container specific settings.json values on container create.
+	"settings": { 
+		"terminal.integrated.shell.linux": "/bin/bash",
+	},
+	
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"esbenp.prettier-vscode",
+		"ecmel.vscode-html-css",
+		"msjsdiag.debugger-for-chrome"
+	],
+
+	// To greatly improve the speed of yarn install.
+	// See https://code.visualstudio.com/docs/remote/containers-advanced#_improving-container-disk-performance
+	"mounts": [
+		"source=triton-viewer-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume",
+		"source=triton-viewer-build,target=${containerWorkspaceFolder}/build,type=volume"
+	],
+
+	// To overcome quirks with file permissions.
+	// See https://code.visualstudio.com/docs/remote/containers-advanced#_adding-a-nonroot-user-to-your-dev-container.
+	"remoteUser": "vscode"
+}

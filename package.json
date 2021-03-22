@@ -1,0 +1,9 @@
+{
+  "name": "mechanical-ui",
+  "version": "0.1.0",
+  "description": "Mechanically satisfying react components",
+  "main": "index.js",
+  "repository": "https://github.com/thomas-gale/mechanical-ui.git",
+  "author": "Thomas Gale <gale.thomasjames@gmail.com>",
+  "license": "MIT"
+}
